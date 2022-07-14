@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:/NS/MyWorkSpace/configServer/src/main/resources/config
+eureka:
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka:8090/eureka
+  instance:
+    appname: configserver
+server:
+  port: 8091

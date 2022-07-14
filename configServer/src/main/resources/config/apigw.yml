@@ -1,0 +1,13 @@
+Google: OK
+zuul:
+  ignored-headers:
+  - Access-Control-Allow-Credentials
+  - Access-Control-Allow-Origin
+  sensitive-headers:
+  - Cookie
+  - Set-Cookie
+  routes:
+    alice:
+      path: /Alice/**
+      service-id: alice
+      strip-prefix: false
