@@ -1,11 +1,11 @@
 spring:
   application:
     name: alice-oc-service
-#  cloud:
-#    config:
-#      enabled: true
-#      fail-fast: true
-#      name: alice
+  cloud:
+    config:
+      enabled: true
+      fail-fast: true
+      name: alice
 #      discovery:
 #        enabled: true
 #        service-id: configserver
