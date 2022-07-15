@@ -19,4 +19,4 @@ spring:
 #  instance:
 #    appname: alice
 server:
-  port: 8093
+  port: 8778
