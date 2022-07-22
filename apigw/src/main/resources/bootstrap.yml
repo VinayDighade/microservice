@@ -8,7 +8,11 @@ spring:
       name: apigw
       discovery:
         enabled: true
-        service-id: configserver
+        service-id: config-server
+ribbon:
+  eureka:
+    enabled: false
+
 eureka:
   client:
     enabled: true

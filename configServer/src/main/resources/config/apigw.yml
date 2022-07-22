@@ -7,7 +7,8 @@ zuul:
   - Cookie
   - Set-Cookie
   routes:
-    alice:
+    Alice:
       path: /Alice/**
-      service-id: alice
-      strip-prefix: false
+      url: https://alice-oc-service-vinaydighade-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/Alice
+#      service-id: alice
+#      strip-prefix: false

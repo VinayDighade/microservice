@@ -1,13 +1,13 @@
 spring:
   application:
-    name: configserver
+    name: config-server
   profiles:
     active: native
   cloud:
     config:
       server:
         native:
-          search-locations: file:///C:/NS/MyWorkSpace/microservice/configServer/src/main/resources/config
+          search-locations: file:///C:/Git/microservice/configServer/src/main/resources/config
 eureka:
   client:
     enabled: true
@@ -16,6 +16,6 @@ eureka:
     service-url:
       defaultZone: http://eureka:8090/eureka
   instance:
-    appname: configserver
+    appname: config-server
 server:
   port: 8091
