@@ -1,26 +1,20 @@
 spring:
   application:
-    name: apigw
-  cloud:
-    config:
-      enabled: true
-      fail-fast: true
-      name: apigw
-      discovery:
-        enabled: true
-        service-id: config-server
+    name: apigw-oc-service
+Google: OK
+zuul:
+  ignored-headers:
+    - Access-Control-Allow-Credentials
+    - Access-Control-Allow-Origin
+  sensitive-headers:
+    - Cookie
+    - Set-Cookie
+  routes:
+    Alice:
+      path: /Alice/**
+      url: http://alice-oc-service:8080
 ribbon:
   eureka:
     enabled: false
-
-eureka:
-  client:
-    enabled: true
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-        defaultZone: http://eureka:8090/eureka
-  instance:
-    appname: apigw
 server:
   port: 8092
