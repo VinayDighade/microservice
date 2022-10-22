@@ -21,10 +21,11 @@ public class AliceController {
 	}
 		
 	@GetMapping("/Hello")
-	public String HelloAlice() {
+	public String HelloAlice() throws InterruptedException {
 		log.info("[HelloAlice()] method is called");
 		counter = counter +1;
 		log.info("Call Counter ={}",counter);
+		Thread.sleep(5000);
 		return aliceServiceConfiguration.getMessage();
 
 	}
