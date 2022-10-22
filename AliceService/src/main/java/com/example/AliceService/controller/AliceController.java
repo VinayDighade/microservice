@@ -23,7 +23,7 @@ public class AliceController {
 	@GetMapping("/Hello")
 	public String HelloAlice() {
 		log.info("[HelloAlice()] method is called");
-		log.info("Call Counter ={}",counter);
+		log.info("Call Counter ={}",counter+1);
 		return aliceServiceConfiguration.getMessage();
 
 	}
