@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.AliceService.AliceServiceConfiguration;
 
+import javax.servlet.http.HttpServletRequest;
+import java.net.URLDecoder;
+
 @RestController
 @RequestMapping("Alice")
 @CrossOrigin
@@ -34,5 +37,13 @@ public class AliceController {
 	public void reset(){
 		counter = 0;
 		log.info("[Reset()] success");
+	}
+
+	@PostMapping("/encodingProblem")
+	public void encodingProblem(HttpServletRequest request){
+
+		String value = URLDecoder.decode(request.getParameter("Key1"));
+		log.info("The Requested Value is = {}", value);
+
 	}
 }

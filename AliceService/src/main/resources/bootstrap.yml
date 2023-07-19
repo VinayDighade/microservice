@@ -1,6 +1,7 @@
 spring:
   application:
     name: alice-oc-service
+BobValue: OKK
 #  cloud:
 #    config:
 #      enabled: true

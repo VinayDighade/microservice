@@ -2,6 +2,7 @@ spring:
   application:
     name: apigw-oc-service
 Google: OK
+
 zuul:
   ignored-headers:
     - Access-Control-Allow-Credentials
@@ -12,9 +13,11 @@ zuul:
   routes:
     Alice:
       path: /Alice/**
-      url: http://alice-oc-service:8080/Alice
+      url: http://localhost:8082/Alice
+  force-original-query-string-encoding: true
 ribbon:
   eureka:
     enabled: false
 server:
   port: 8092
+debug: true

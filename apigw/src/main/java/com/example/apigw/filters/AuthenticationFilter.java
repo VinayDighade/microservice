@@ -15,7 +15,7 @@ public class AuthenticationFilter extends ZuulFilter {
 	public Object run() throws ZuulException {
 		RequestContext ctx = RequestContext.getCurrentContext();
 		HttpServletRequest request = ctx.getRequest();
-		System.out.println("In APIGW for:" +request.getContextPath());
+		log.info("In APIGW for:{}" ,request.getContextPath());
 		return null;
 	}
 
